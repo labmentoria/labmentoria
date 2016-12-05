@@ -1,0 +1,53 @@
+.how-it-works{
+  width: 100%;
+  height: auto;
+  float: left;
+  padding: 71px 0;
+  background-color: $bg-how-it-work;
+    h2{
+      width: 100%;
+      height: auto;
+      float: left;
+      margin-bottom: 94px;
+      text-transform: uppercase;
+      text-align: center;
+      font-family: $font-lato;
+      font-weight: 400;
+      font-size: 35px;
+      color: $title;
+    }
+    ul{
+      width: 100%;
+      height: auto;
+      float: left;
+    }
+    li{
+      padding: 0 47px 0 0;
+      &:last-child{
+        padding-right: 0;
+      }
+    }
+    figure{
+      width: 100%;
+      height: 216px;
+      float: left;
+      margin: 0;
+        svg{
+          width: 100%;
+          height: 216px;
+          float: left;
+        }
+    }
+    figcaption{
+      width: 100%;
+      height: auto;
+      float: left;
+      margin-top: 25px;
+      line-height: 25px;
+      text-align: center;
+      font-family: $font-lato;
+      font-weight: 400;
+      font-size: 18px;
+      color: $text-how-it-work;
+    }
+}

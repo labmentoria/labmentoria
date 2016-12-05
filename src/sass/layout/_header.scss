@@ -1,0 +1,111 @@
+header{
+	width: 100%;
+	padding: 12px 0;
+	background-color: $bg-header;
+	position: fixed;
+	z-index: 1;
+
+		.header{
+
+			&-logo{
+				height: 59px;
+					svg{
+						width: 100%;
+						height: 59px;
+						float: left;
+					}
+			}
+			&-menu{
+				margin-top: 24px;
+					ul{
+						width: 100%;
+						height: auto;
+						float: left;
+					}
+					li{
+						float: left;
+						padding: 0 12px;
+						&:last-child{
+							padding-right: 0;
+						}
+					}
+					a{
+						position: relative;
+						float: left;
+						padding: 0 5px 10px;
+						text-decoration: none;
+						text-transform: uppercase;
+						font-family: $font-lato;
+						font-size: 13px;
+						color: $text-header;
+						&:after{
+							content: "";
+							width: 100%;
+							height: 2px;
+							position: absolute;
+							left: 0px;
+							bottom: 0px;
+							background-color: $text-header;
+							opacity: 0;
+							transition: height 0.5s,opacity 0.5s,transform 0.5s;
+							transform: translateY(-5px);
+						}
+						&:hover{
+							&:after{
+								opacity: 1;
+								height: 2px;
+								transform: translateY(0px);
+							}
+						}
+					}
+			}
+			&-login{
+				float: right;
+				margin-top: 10px;
+					ul{
+						width: 100%;
+						height: auto;
+						float: left;
+					}
+					li{
+						float: left;
+						&:first-child{
+							width: 70px;
+								a{
+									&:hover{
+										color: $text-hover;
+									}
+								}
+						}
+						&:last-child{
+							width: 117px;
+								a{
+									color: $text-different;
+									background-color: $bg-different;
+									transition: color 0.5s ease 0s;
+									transition: box-shadow 0.5s ease 0s;
+									box-shadow: inset 0 0px 0 0px $bg-hover;
+									&:hover {
+										text-decoration: none;
+										box-shadow: inset 0 40px 0 0px $bg-hover;
+										color: #FFF;
+									}
+								}
+						}
+					}
+					a{
+						width: 100%;
+						height: 40px;
+						float: left;
+						text-align: center;
+						text-decoration: none;
+						text-transform: uppercase;
+						line-height: 40px;
+						font-family: $font-lato;
+						font-size: 13px;
+						color: $text-header;
+					}
+			}
+
+		}
+}

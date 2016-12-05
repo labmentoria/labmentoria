@@ -1,0 +1,14 @@
+footer{
+  width: 100%;
+  height: auto;
+  float: left;
+  padding: 20px 0;
+  background-color: $bg-footer;
+    p{
+      text-align: center;
+      text-transform: uppercase;
+      font-family: $font-lato;
+      font-size: 13px;
+      color: $text-footer;
+    }
+}
