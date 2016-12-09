@@ -24,7 +24,7 @@
 
 		<nav class="header-login col-xs-2">
 			<ul>
-				<li><a href="#">Login</a></li>
+				<li><a href="#" id="nav-login">Login</a></li>
 				<li><a href="#">Cadastre-se</a></li>
 			</ul>
 		</nav>
@@ -84,6 +84,35 @@
 	</div>
 </footer>
 
-	<script src="script/jquery.js"></script>
+<div class="modal-login col-xs-4" id="login">
+
+	<h2>Faça seu login</h2>
+
+	<fieldset>
+		
+		<div class="input-fild">
+			<label for="email">E-mail</label>
+			<input type="email" id="email" name="email">
+		</div>
+		<div class="input-fild">
+			<label for="senha">Senha</label>
+			<input type="password" id="senha" name="senha">
+		</div>
+
+		<div class="fild-btn">
+			<input type="submit" id="entrar" value="Entrar">
+		</div>
+
+		<div class="register">
+			Ainda não se cadastro? <a href="#">Cadastre-se</a>
+		</div>
+		
+	</fieldset>
+	
+</div>
+
+<div id="overlay"></div>
+
+	<script src="script/lab-mentoria.min.js"></script>
 </body>
 </html>

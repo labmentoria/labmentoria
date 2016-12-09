@@ -11,10 +11,15 @@
   "devDependencies": {
     "browser-sync": "^2.18.2",
     "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.2",
     "gulp-clean": "^0.3.2",
-    "gulp-csslint": "^1.0.0",
-    "gulp-jshint": "^2.0.4",
+    "gulp-concat": "^2.6.0",
+    "gulp-csslint": "^0.2.0",
+    "gulp-jshint": "^1.11.2",
     "gulp-sass": "^2.3.2",
-    "jshint": "^2.9.4"
+    "gulp-sourcemaps": "^1.9.1",
+    "gulp-uglify": "^2.0.0",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.0.1"
   }
 }

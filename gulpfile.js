@@ -1,8 +1,24 @@
 var gulp          = require('gulp'),
-	browserSync   = require('browser-sync'),
-	sass          = require('gulp-sass');
-	clean         = require('gulp-clean');
+	  browserSync   = require('browser-sync'),
+    sass          = require('gulp-sass'),
+	  jshint        = require('gulp-jshint'),
+    jshintStylish = require('jshint-stylish'),
+    csslint       = require('gulp-csslint'),
+    autoprefixer  = require('gulp-autoprefixer'),
+    concat        = require('gulp-concat'),
+    uglify        = require('gulp-uglify'),
+	  clean         = require('gulp-clean');
 
+var inputSass  = './src/sass/**/*.scss';
+var outputSass = './src/css/';
+var sassOptions  = {
+  errLogToConsole: true,
+  outputStyle: 'compressed'
+};
+
+var autoprefixerOptions  = {
+  browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+}
 
 gulp.task('default', ['server'], function(){});
 
@@ -18,14 +34,24 @@ gulp.task('clean', function(){
         .pipe(clean());
 });
 
+
 gulp.task('sass', function() {
-    return gulp.src("src/sass/lab-mentoria.min.scss")
-        .pipe(sass({outputStyle: 'compressed'}))
-        .pipe(gulp.dest("src/css"))
+    return gulp.src(inputSass)
+        .pipe(sass(sassOptions).on('error', sass.logError))
+        .pipe(gulp.dest(outputSass))
+        .pipe(autoprefixer(autoprefixerOptions))
         .pipe(browserSync.stream());
 });
 
-gulp.task('server', ['sass'], function(){
+gulp.task('scripts', function() {
+  return gulp.src('src/script/**/*.js')
+    .pipe(concat('lab-mentoria.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('src/script/'));
+});
+
+
+gulp.task('server', ['sass', 'scripts'], function(){
   browserSync.init({
     server: {
       baseDir: 'src'
@@ -33,7 +59,15 @@ gulp.task('server', ['sass'], function(){
   });
   
   gulp.watch('src/**/*').on('change', browserSync.reload);
+
+  gulp.watch('src/script/**/*.js').on('change', function(event){
+    gulp.src(event.path)
+        .pipe(jshint())
+        .pipe(jshint.reporter(jshintStylish));
+  });
   
-  gulp.watch("src/sass/**/*", ['sass']);  
+  gulp.watch(inputSass, ['sass']);  
+
+  gulp.watch(['script/**/*.js'], ['scripts'])
 
 });
