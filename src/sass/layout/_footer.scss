@@ -10,5 +10,9 @@ footer{
       font-family: $font-lato;
       font-size: 13px;
       color: $text-footer;
+        span svg {
+          width: 16px;
+          margin-left: 2px;
+        }
     }
 }

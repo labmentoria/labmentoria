@@ -47,27 +47,29 @@ gulp.task('scripts', function() {
   return gulp.src('src/script/**/*.js')
     .pipe(concat('lab-mentoria.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('src/script/'));
+    .pipe(gulp.dest('src/js/'));
 });
 
 
-gulp.task('server', ['sass', 'scripts'], function(){
+gulp.task('server', ['sass'], function(){
   browserSync.init({
     server: {
       baseDir: 'src'
     }
   });
-  
+
   gulp.watch('src/**/*').on('change', browserSync.reload);
 
   gulp.watch('src/script/**/*.js').on('change', function(event){
+		gulp.src('src/script/**/*.js')
+		.pipe(concat('lab-mentoria.min.js'))
+		.pipe(uglify())
+		.pipe(gulp.dest('src/js/'));
     gulp.src(event.path)
         .pipe(jshint())
         .pipe(jshint.reporter(jshintStylish));
   });
-  
-  gulp.watch(inputSass, ['sass']);  
 
-  gulp.watch(['script/**/*.js'], ['scripts'])
+  gulp.watch(inputSass, ['sass']);
 
 });
