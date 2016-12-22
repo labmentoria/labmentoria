@@ -113,14 +113,14 @@ header{
 
 		}
 }
-@media (max-width: $desktops) {
+@media screen and (max-width: $desktops) {
 	header{
 		.nav-mobile{
 			display: block;
 			width: 30px;
 			height: 30px;
 			float: right;
-			margin-top: 13px;
+			margin-top: 20px;
 			cursor: pointer;
 			position: relative;
 			&:before{
@@ -157,19 +157,6 @@ header{
 				}
 			}
 		}
-		.nav-login-mobile{
-			display: block;
-			width: 30px;
-			height: 30px;
-			float: right;
-			margin: 10px 0 0 17px;
-			cursor: pointer;
-			svg{
-				width: 27px;
-				height: 27px;
-				float: left;
-			}
-		}
 		.header-menu{
 			padding: 0;
 		    position: absolute;
@@ -178,11 +165,11 @@ header{
 		    background: $bg-header;
 		    margin: 0;
 		    height: 100vh;
-		    transform: translateX(-240px);
+		    transform: translateX(-113%);
 		    transition: all .7s ease-in-out;
 			&.nav-active{
 		    	transition: all .7s ease-in-out;
-				transform: translateX(0px);
+				transform: translateX(0%);
 			}
 			li{
 				width: 100%;
@@ -203,25 +190,18 @@ header{
 			}
 		}
 		.header-login{
-			position: absolute;
-		    top: 73px;
-		    right: 0;
-		    height: 100vh;
-		    background-color: #413990;
-		    transform: translateX(270px);
-		    transition: all .7s ease-in-out;
-		    &.account-active{
-		    	transform: translateX(0px);
-		    }
-		    	li{
-		    		width: 100%;
-		    		&:first-child{
-		    			width: 100%;
-		    		}
-		    		&:last-child{
-		    			width: 100%
-		    		}
-		    	}
+			float: right;
+			li{
+				&:first-child {
+				    width: 35%;
+				}	
+				&:last-child {
+				    width: 65%;
+				}
+			}
 		}
 	}
+}
+@media screen and (min-width: $desktops) and (max-width: $large-desktops) {
+
 }
