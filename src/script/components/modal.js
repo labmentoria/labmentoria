@@ -27,7 +27,7 @@ function loginModal(){
       event.preventDefault();
       overlay.classList.remove('overlay-active');
       modalLogin.classList.remove('modal-active');
-    });    
+    });
   }
 }
 

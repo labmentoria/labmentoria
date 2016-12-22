@@ -14,6 +14,7 @@ $bg-btn: $bg-hover;
 $bg-btn-hover: $bg-header;
 
 $border-input: #d5d5d6;
+$border-nav-mobile: #4E488E;
 
 $text-hover: $bg-hover;
 $text-header: #FFFFFF;
@@ -30,3 +31,10 @@ $title: #413990;
 
 $link-modal: #696b74;
 $link-hover: $text-different;
+
+
+//media
+$phones: 543px;
+$tablets: 767px;
+$desktops: 991px;
+$large-desktops: 1023px;

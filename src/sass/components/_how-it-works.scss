@@ -51,3 +51,15 @@
       color: $text-how-it-work;
     }
 }
+@media (max-width: $large-desktops) {
+  .how-it-works{
+    h2{
+      margin-bottom: 54px;
+      font-size: 34px;
+    }
+    li{
+      padding: 0 0 0 0;
+      margin-bottom: 40px;
+    }
+  }
+}
