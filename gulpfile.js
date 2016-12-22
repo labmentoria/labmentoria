@@ -10,7 +10,7 @@ var gulp          = require('gulp'),
 	  clean         = require('gulp-clean');
 
 var inputSass  = './src/sass/**/*.scss';
-var outputSass = './src/css/';
+var outputSass = './src/public/css/';
 var sassOptions  = {
   errLogToConsole: true,
   outputStyle: 'compressed'
@@ -47,16 +47,16 @@ gulp.task('scripts', function() {
   return gulp.src('src/script/**/*.js')
     .pipe(concat('lab-mentoria.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('src/js/'));
+    .pipe(gulp.dest('src/public/js/'));
 });
 
 
 gulp.task('server', ['sass'], function(){
-  browserSync.init({
+ /* browserSync.init({
     server: {
       baseDir: 'src'
     }
-  });
+  });*/
 
   gulp.watch('src/**/*').on('change', browserSync.reload);
 
@@ -64,7 +64,7 @@ gulp.task('server', ['sass'], function(){
 		gulp.src('src/script/**/*.js')
 		.pipe(concat('lab-mentoria.min.js'))
 		.pipe(uglify())
-		.pipe(gulp.dest('src/js/'));
+		.pipe(gulp.dest('src/public/js/'));
     gulp.src(event.path)
         .pipe(jshint())
         .pipe(jshint.reporter(jshintStylish));
