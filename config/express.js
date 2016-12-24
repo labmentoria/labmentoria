@@ -17,13 +17,13 @@ module.exports = function(){
       .then('infra')
       .into(app);
 
-  app.use(function(req,res,next){
+  /*app.use(function(req,res,next){
     res.status(404).render('erros/404');
     next();
   });
   app.use(function(error,req,res,next){
     res.status(500).render('erros/500');
     next();
-  });
+  });*/
   return app;
 }

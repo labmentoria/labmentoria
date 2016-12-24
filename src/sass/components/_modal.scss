@@ -1,5 +1,4 @@
 .overlay{
-	opacity: 0;
 	display: none;
 	width: 100%;
 	height: 100%;
@@ -10,7 +9,6 @@
 	background-color: rgba(0,0,0, 0.6);
 }
 .modal-login{
-	opacity: 0;
 	display: none;
 	position: fixed;
 	z-index: 3;
@@ -134,14 +132,4 @@
 					}
 				}
 		}
-}
-.modal-active{
-	opacity: 1;
-	display: block;
-	animation: fadeIn .7s ease-in;
-}
-.overlay-active{
-	opacity: 1;
-	display: block;
-	animation: fadeIn .7s ease-in;
 }
