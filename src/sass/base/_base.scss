@@ -1,0 +1,35 @@
+.page-internal{
+	margin-top: 83px;
+		.main,
+		.box-content{
+			float: left;
+		}
+
+		h1{
+			width: 100%;
+			height: auto;
+			float: left;
+			margin: 60px 0 0;
+			text-transform: uppercase;
+			text-align: center;
+			font-family: $font-lato;
+			font-weight: 300;
+			font-size: 35px;
+			color: $title;
+		}
+		h2{
+			font-family: $font-lato;
+			color: $title;
+		}
+		p{
+			width: 100%;
+			height: auto;
+			float: left;
+			margin: 35px 0 0;
+			text-align: center;
+			font-family: $font-lato;
+			font-weight: 400;
+			font-size: 18px;
+			color: $text-different;
+		}
+}

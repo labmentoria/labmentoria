@@ -1,9 +1,11 @@
-@import "base/reset";
-@import "base/normalize";
-@import "base/grid";
 
 @import "tools/site-settings";
 @import "tools/animations";
+
+@import "base/reset";
+@import "base/normalize";
+@import "base/grid";
+@import "base/base";
 
 @import "layout/header";
 @import "layout/footer";
@@ -11,3 +13,5 @@
 @import "components/banners";
 @import "components/modal";
 @import "components/how-it-works";
+
+@import "pages/mentores"

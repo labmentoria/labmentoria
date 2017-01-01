@@ -62,36 +62,7 @@
 
 <% include ../partials/footer %>
 
-<div class="modal-login col-xs-4" id="modal-login">
-
-	<div class="fechar-modal">
-		<span id="fechar-modal">X</span>
-	</div>
-
-	<h2>Faça seu login</h2>
-
-	<fieldset>
-
-		<div class="input-fild">
-			<label for="email">E-mail</label>
-			<input type="email" id="email" name="email">
-		</div>
-		<div class="input-fild">
-			<label for="senha">Senha</label>
-			<input type="password" id="senha" name="senha">
-		</div>
-
-		<div class="fild-btn">
-			<input type="submit" id="entrar" value="Entrar">
-		</div>
-
-		<div class="register">
-			Ainda não se cadastro? <a href="#">Cadastre-se</a>
-		</div>
-
-	</fieldset>
-
-</div>
+<% include ../partials/modal-login %>
 
 <div id="overlay" class="overlay"></div>
 
