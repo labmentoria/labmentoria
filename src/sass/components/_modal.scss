@@ -9,11 +9,13 @@
 	background-color: rgba(0,0,0, 0.6);
 }
 .modal-login{
+	width: 400px;
+	height: 320px;
 	display: none;
 	position: fixed;
 	z-index: 3;
 	top: calc(50% - 200px);
-	left: calc(50% - 349px);
+	left: calc(50% - 312px);
 	padding: 44px 112px;
 	background-color: $bg-modal;
 		h2{
@@ -132,4 +134,22 @@
 					}
 				}
 		}
+}
+@media screen and (max-width: $desktops) {
+	.modal-login {
+	    width: 60%;
+	    left: calc(50% - 40%);
+	    padding: 10%;
+
+	    	.fechar-modal{
+	    		span{
+	    			top: -30px;
+    				right: -22px;
+    				font-size: 30px;
+	    		}
+	    	}
+	    	.register{
+				margin-top: 10%;
+	    	}
+	}
 }
