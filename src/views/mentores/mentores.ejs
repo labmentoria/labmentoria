@@ -26,22 +26,15 @@
 					<p>Filtre por:</p>
 
 						<nav class="filter-choose">
-							<h2>Selecionar <span class="icon-down"></span></h2>
-							<ul>
-								<li id="Front-End">Front-End</li>
-								<li id="Back-End">Back-End</li>
-								<li id="Design">Design</li>
-								<li id="UX">UX</li>
-								<li id="Full-Stack">Full-Stack</li>
-							</ul>
+							<% include ../partials/categories %>
 						</nav>
 				</section>
 
-				<div class="showcase-mentors">
+				<div class="showcase">
 					<ul>
 						<%for (var i = 0; i < lista.length; i++) {%>
 						<li class="" categoria="<%=lista[i].categoria%>">
-							<figure class="mentors-images">
+							<figure class="showcase-images">
 								<img src="<%=lista[i].foto%>" alt="<%=lista[i].nome%>">
 								<figcaption><h2><%=lista[i].nome%></h2></figcaption>
 							</figure>
