@@ -16,33 +16,17 @@
 
 	<div class="main">
 
-		<h1 class="">Conheça quem precisa de você!</h1>
+		<%for (var i = 0; i < pupilo.length; i++) {%>
+		<h1 class=""><%=pupilo[i].nome%></h1>
+		<%}%>
 
 		<p class="">Esta é a nossa comunidade de profissionais de tecnologia<br />dispostas a ajudá-la nesta jornada!</p>
 
 			<div class="box-content">
-
-				<section class="filter">
-					<p>Filtre por:</p>
-
-						<nav class="filter-choose">
-							<% include ../partials/categories %>
-						</nav>
-				</section>
-
+				
 				<div class="showcase">
 					<ul>
-						<%for (var i = 0; i < listaPupilos.length; i++) {%>
-						<li class="" categoria="<%=listaPupilos[i].categoria%>">
-							<figure class="showcase-images">
-								<img src="<%=listaPupilos[i].foto%>" alt="<%=listaPupilos[i].nome%>">
-								<figcaption><h2><%=listaPupilos[i].nome%></h2></figcaption>
-							</figure>
-							<div class="help-btn">
-								<a href="/user?id=<%=listaPupilos[i].id%>">Help</a>
-							</div>
-						</li>
-						<%}%>
+						
 					</ul>
 				</div>
 				
