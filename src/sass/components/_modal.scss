@@ -8,7 +8,7 @@
 	left: 0;
 	background-color: rgba(0,0,0, 0.6);
 }
-.modal-login{
+.modal{
 	width: 400px;
 	height: 320px;
 	display: none;
@@ -136,7 +136,7 @@
 		}
 }
 @media screen and (max-width: $desktops) {
-	.modal-login {
+	.modal {
 	    width: 60%;
 	    left: calc(50% - 40%);
 	    padding: 10%;
