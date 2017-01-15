@@ -1,0 +1,141 @@
+body{
+	&.user{
+    .box-content{
+      margin-top: 50px;
+    }
+    .pupilo{
+      &-detail{
+        width: 27%;
+        height: auto;
+        float: left;
+          figure{
+            width: 100%;
+            height: auto;
+            float: left;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+              img{
+                width: 100%;
+                height: auto;
+                float: left;
+                border: 10px solid $border-image-pupilo;
+                box-sizing: border-box;
+              }
+          }
+          p{
+            width: 100%;
+            height: 40px;
+            float: left;
+            margin-top: 10px;
+            text-align: left;
+            line-height: 40px;
+            font-size: 1.1em;
+            color: $text-default;
+            font-weight: 400;
+              &:nth-child(2n+1){
+                background-color: $bg-how-it-work;
+              }
+              strong{
+                font-weight: 600;
+              }
+          }
+      }
+      &-doubt{
+        width: 70%;
+        height: auto;
+        float: right;
+          h2{
+            width: 100%;
+            height: 40px;
+            float: left;
+            margin-bottom: 20px;
+            line-height: 40px;
+            font-size: 1.5em;
+            color: $title-different;
+              span{
+                width: 200px;
+    						height: 40px;
+    						float: right;
+    						border: 0px;
+    						background-color: $bg-btn;
+                text-align: center;
+    						line-height: 40px;
+    						text-transform: uppercase;
+    						font-family: $font-lato;
+    						font-weight: 400;
+    						font-size: 16px;
+    						color: $text-btn;
+    						cursor: pointer;
+    						transition: color 0.5s ease 0s;
+    						transition: box-shadow 0.5s ease 0s;
+    						box-shadow: inset 0 0px 0 0px $bg-btn-hover;
+    						text-decoration: none;
+    						&:hover {
+    							text-decoration: none;
+    							box-shadow: inset 0 -50px 0 0px $bg-btn-hover;
+    							color: #FFF;
+    						}
+              }
+          }
+          p{
+            width: 100%;
+            height: auto;
+            float: left;
+            margin-top: 0;
+            margin-bottom: 20px;
+            line-height: 20px;
+            text-align: left;
+            font-size: 1em;
+            color: $text-default;
+            font-weight: 400;
+          }
+      }
+    }
+    @media screen and (max-width: $desktops) {
+      .pupilo-detail{
+        width: 100%;
+          figure{
+            width: 48%;
+              img{
+                width: 100%;
+                height: auto;
+              }
+          }
+          .pupilo-info {
+              width: 48%;
+              float: right;
+                p{
+                  font-size: .9em;
+                }
+          }
+      }
+      .pupilo-doubt {
+          width: 100%;
+          height: auto;
+          float: right;
+          margin-top: 10px;
+            h2{
+              height: auto;
+              font-size: 1.2em;
+            }
+      }
+
+    }
+    @media screen and (min-width: $tablets) and (max-width: $desktops) {
+      .pupilo-detail{
+        .pupilo-info{
+          p {
+              font-size: 1.2em;
+          }
+        }
+      }
+      .pupilo-doubt {
+        h2 {
+            height: 40px;
+            font-size: 1.5em;
+        }
+      }
+    }
+  }
+}

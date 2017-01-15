@@ -7,7 +7,7 @@
 	<title>Pupilos Lab Mentoria</title>
 	<link rel="stylesheet" href="css/lab-mentoria.min.css">
 </head>
-<body class="pupilos">
+<body class="user">
 
 <% include ../partials/header %>
 
@@ -18,23 +18,34 @@
 
 		<%for (var i = 0; i < pupilo.length; i++) {%>
 		<h1 class=""><%=pupilo[i].nome%></h1>
-		<%}%>
 
-		<p class="">Esta é a nossa comunidade de profissionais de tecnologia<br />dispostas a ajudá-la nesta jornada!</p>
 
 			<div class="box-content">
-				
-				<div class="showcase">
-					<ul>
-						
-					</ul>
-				</div>
-				
+
+				<aside class="pupilo-detail">
+					<figure>
+						<img src="<%=pupilo[i].foto%>" alt="<%=pupilo[i].nome%>">
+					</figure>
+
+					<div class="pupilo-info">
+						<p><strong>Categoria:</strong> <%=pupilo[i].categoria%></p>
+						<p><strong>Cidade:</strong> <%=pupilo[i].cidade%></p>
+						<p><strong>Estado:</strong> <%=pupilo[i].estado%></p>
+					</div>
+				</aside>
+
+					<article class="pupilo-doubt">
+						<h2>Preciso de ajuda com: <span class="btn-ajudar">Quero Ajudar</span></h2>
+						<p><%=pupilo[i].descricao%></p>
+					</article>
+
 			</div>
 
-		
+		<%}%>
+
+
 	</div>
-	
+
 </div>
 
 

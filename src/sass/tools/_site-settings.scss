@@ -19,6 +19,7 @@ $border-input: #d5d5d6;
 $border-nav-mobile: #4E488E;
 $border-filter: #dbdbdb;
 $border-image: #FFFFFF;
+$border-image-pupilo: $border-nav-mobile;
 
 $text-hover: $bg-hover;
 $text-header: #FFFFFF;
@@ -28,11 +29,12 @@ $text-different: #413990;
 $text-how-it-work: $text-different;
 $text-label: #909090;
 $text-input: #414141;
-$text-btn: $text-header; 
+$text-btn: $text-header;
 $text-default: #000;
 
 
 $title: #413990;
+$title-different: $text-hover;
 
 $link-modal: #696b74;
 $link-hover: $text-different;
