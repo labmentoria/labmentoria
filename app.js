@@ -1,6 +1,7 @@
 var app = require('./config/express')();
 var http = require('http').Server(app);
 
-app.listen(3000, function(){
+var porta = process.env.PORT || 3000;
+app.listen(porta, function(){
   console.log('servidor rodando');
 });
