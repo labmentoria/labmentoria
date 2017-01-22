@@ -17,26 +17,27 @@
 	<div class="main">
 
 		<%for (var i = 0; i < pupilo.length; i++) {%>
-		<h1 class=""><%=pupilo[i].nome%></h1>
-
 
 			<div class="box-content">
 
 				<aside class="pupilo-detail">
 					<figure>
-						<img src="<%=pupilo[i].foto%>" alt="<%=pupilo[i].nome%>">
+						<img src="<%=pupilo[i].userFoto%>" alt="<%=pupilo[i].userNome%>">
 					</figure>
 
 					<div class="pupilo-info">
-						<p><strong>Categoria:</strong> <%=pupilo[i].categoria%></p>
-						<p><strong>Cidade:</strong> <%=pupilo[i].cidade%></p>
-						<p><strong>Estado:</strong> <%=pupilo[i].estado%></p>
+						<p><%=pupilo[i].userNome%> <span><%=pupilo[i].nome%></span></p>
+						<p><span><%=pupilo[i].userCidade%> - <%=pupilo[i].userEstado%></span></p>
+					</div>
+
+					<div class="pupilo-ajudar">
+						<div class="btn-ajudar">Quero Ajudar</div>
 					</div>
 				</aside>
 
 					<article class="pupilo-doubt">
-						<h2>Preciso de ajuda com: <span class="btn-ajudar">Quero Ajudar</span></h2>
-						<p><%=pupilo[i].descricao%></p>
+						<h2>Preciso de ajuda com:</h2>
+						<p><%=pupilo[i].userDescricao%></p>
 					</article>
 
 			</div>

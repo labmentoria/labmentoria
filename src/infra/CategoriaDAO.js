@@ -3,7 +3,7 @@ function CategoriaDAO(connection){
 }
 
 CategoriaDAO.prototype.lista = function(callback){
-    this._connection.query('SELECT m.*, c.nome AS categoria FROM mentor AS m  INNER JOIN categoria AS c ON m.categoria = c.id  ORDER BY m.id ASC',callback);
+    this._connection.query('select * from user where userTipo = 2',callback);
 }
 
 module.exports = function(){

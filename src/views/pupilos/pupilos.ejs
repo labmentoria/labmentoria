@@ -33,13 +33,13 @@
 				<div class="showcase">
 					<ul>
 						<%for (var i = 0; i < listaPupilos.length; i++) {%>
-						<li class="" categoria="<%=listaPupilos[i].categoria%>">
+						<li class="" categoria="<%=listaPupilos[i].userCategoria%>">
 							<figure class="showcase-images">
-								<img src="<%=listaPupilos[i].foto%>" alt="<%=listaPupilos[i].nome%>">
-								<figcaption><h2><%=listaPupilos[i].nome%></h2></figcaption>
+								<img src="<%=listaPupilos[i].userFoto%>" alt="<%=listaPupilos[i].userNome%>">
+								<figcaption><h2><%=listaPupilos[i].userNome%></h2></figcaption>
 							</figure>
 							<div class="help-btn">
-								<a href="/user?id=<%=listaPupilos[i].id%>">Help</a>
+								<a href="/user?id=<%=listaPupilos[i].userId%>">Help</a>
 							</div>
 						</li>
 						<%}%>
