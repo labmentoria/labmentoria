@@ -24,24 +24,26 @@
 
 
 				<section class="form">
-					<div class="field-form field-position1">
-						<label for="name">Nome</label>
-						<input type="text" id="name" placeholder="Luiza Fulana">
-					</div>
-					<div class="field-form field-position2">
-						<label for="email">E-mail</label>
-						<input type="email" id="email" placeholder="luizafurtado@gmail.com">
-					</div>
-					<div class="different-field-form">
-						<label for="assunto">Assunto</label>
-						<input type="text" id="assunto" placeholder="Não sei o que fazer">
-					</div>
-					<div class="different-field-form">
-						<textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui"></textarea>
-					</div>
-					<div class="field-button">
-						<input type="submit" value="Enviar" class="btn-form">
-					</div>
+					<form action="/contato/envia-contato" method="post">
+						<div class="field-form field-position1">
+							<label for="name">Nome</label>
+							<input type="text" id="name" name="name" placeholder="Luiza Fulana">
+						</div>
+						<div class="field-form field-position2">
+							<label for="email">E-mail</label>
+							<input type="email" id="email" name="email" placeholder="luizafurtado@gmail.com">
+						</div>
+						<div class="different-field-form">
+							<label for="assunto">Assunto</label>
+							<input type="text" id="assunto" name="assunto" placeholder="Não sei o que fazer">
+						</div>
+						<div class="different-field-form">
+							<textarea name="mensagem" id="mensagem" placeholder="Digite sua mensagem aqui"></textarea>
+						</div>
+						<div class="field-button">
+							<input type="submit" value="Enviar" class="btn-form">
+						</div>
+					</form>
 				</section>
 
 			</div>

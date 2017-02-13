@@ -3,6 +3,7 @@ var load = require('express-load');
 var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var methodOverride = require('express-method-override');
+var nodemailer = require('nodemailer');
 
 module.exports = function(){
   var app = express();
