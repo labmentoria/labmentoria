@@ -8,29 +8,34 @@
 
 	<fieldset>
 
-		<div class="input-fild">
-			<label for="email">E-mail</label>
-			<input type="email" id="email" name="email">
-		</div>
-		<div class="input-fild">
-			<label for="senha">Senha</label>
-			<input type="password" id="senha" name="senha">
-		</div>
+		<form action="/cadastro/salva" method="post">
 
-		<div class="input-fild">
-			<div class="input-kind">
-				<input type="radio" id="mentor" name="kind">
-				<label for="mentor">Mentor</label>
+			<div class="input-fild">
+				<label for="userEmail">E-mail</label>
+				<input type="email" id="userEmail" name="userEmail">
 			</div>
-			<div class="input-kind">
-				<input type="radio" id="pupilo" name="kind">
-				<label for="pupilo">Pupilo</label>
+			<div class="input-fild">
+				<label for="userSenha">Senha</label>
+				<input type="password" id="userSenha" name="userSenha">
 			</div>
-		</div>
 
-		<div class="fild-btn">
-			<input type="submit" id="entrar" value="Cadastrar">
-		</div>
+			<div class="input-fild">
+				<div class="input-kind">
+					<input type="radio" id="mentor" value="1" name="userTipo">
+					<label for="mentor">Mentor</label>
+				</div>
+				<div class="input-kind">
+					<input type="radio" id="pupilo" value="2" name="userTipo">
+					<label for="pupilo">Pupilo</label>
+				</div>
+			</div>
+
+			<div class="fild-btn">
+				<input type="submit" id="entrar" value="Cadastrar">
+			</div>
+
+		</form>
+
 
 	</fieldset>
 
