@@ -12,6 +12,10 @@ body{
 			width: 600px;
 			height: auto;
 			margin: 67px auto;
+				input,
+				textarea{
+					outline: 1px solid transparent;
+				}
 				.field-form{
 					width: 48%;
 					height: 48px;
